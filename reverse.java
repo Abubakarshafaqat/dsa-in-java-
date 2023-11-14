@@ -5,10 +5,15 @@ public class reverse {
     static int[] reverse(int[] arr) {
         int[] ans = new int[arr.length];
         int j = 0;
-        for (int i = arr.length; i >= 0; i--) {
+        for (int i = arr.length-1; i >= 0; i--) {
             ans[j++] = arr[i];
         }
         return ans;
+    }
+    static void print(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            System.out.print(" "+arr[i]);
+        }
     }
 
     public static void main(String[] args) {
@@ -21,9 +26,7 @@ public class reverse {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = s1.nextInt();
         }
-
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(reverse(arr));
-        }
+        int[] arry_2 =  reverse(arr);
+        print(arry_2);
     }
 }
